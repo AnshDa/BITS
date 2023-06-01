@@ -1,15 +1,25 @@
 ___________________________________________________________________________________________________________________________________________
-# unique element in an array ,if all the elements are present twice except one
+I) unique element in an array ,if all the elements are present twice except one
 
 int xor=0;
 for(int i=0;i<nums.size();i++) xor = xor^nums[i];
 cout<<xor<<endl;
 
 ____________________________________________________________________________________________________________________________________________
-# swapping of two numbers a,b without using third variable
+II) swapping of two numbers a,b without using third variable
 
 a = a^b; 
 b = a^b;
 a = a^b;
 
-there is an arithematic way to swapp two numbers without using third variable
+there is an arithematic way to swap two numbers without using third variable
+a=a+b;
+a=a-b;
+b=a-b;
+____________________________________________________________________________________________________________________________________________
+III) if we have to find xor of numbers from 1 to N
+if(n%4==1) return 1;
+if(n%4==2) return n+1;
+if(n%4==3) return 0;
+if(n%4==0) return n;
+____________________________________________________________________________________________________________________________________________
