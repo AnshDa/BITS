@@ -23,4 +23,14 @@ if(n%4==2) return n+1;
 if(n%4==3) return 0;
 if(n%4==0) return n;
 ____________________________________________________________________________________________________________________________________________
-IV) 
+IV)  the frequently used bits ideas
+
+i) check bit ----->  if we have to check the i th bit is set or not ,
+    we have to create a mask of 1<<i
+    and do (&) and with it 
+ii)set bit-------> if we set any bit i,in the number 
+    we have to create a mask of 1<<i and do or(|) with the number
+iii) clear bit----->if we have to clear the i th bit then we willl create the mask as negation of previous masks ~(1<<i)
+     and we do and with original number 
+iv) clear first set bit ----> do n&(n-1)
+v) to check number is power of 2 ---> only 1 set bit  or n&(n-1)==0
