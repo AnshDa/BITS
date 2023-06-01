@@ -34,3 +34,13 @@ iii) clear bit----->if we have to clear the i th bit then we willl create the ma
      and we do and with original number 
 iv) clear first set bit ----> do n&(n-1)
 v) to check number is power of 2 ---> only 1 set bit  or n&(n-1)==0
+vi) count set bit --> 
+   int cnt=0;
+   while(n!=0){
+     n=n&(n-1);
+     cnt++;
+     }
+     time complexity O(setbit)
+     
+     number of set bit = __builtin_popcount(n);
+_________________________________________________________________________________________________________________________________________
