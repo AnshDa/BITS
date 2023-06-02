@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  vector<int>nums;
+  while(n--){
+    int x;cin>>x;
+    nums.emplace_back(x);
+  }
+  int ans=0;
+  for(auto x:nums) ans^=x;
+  
+  int mask=ans&~(ans-1);
+  
+  int a=0,b=0;
+  for(auto x:nums){
+    if(x&mask) a^=x;
+    else b^=x;
+  }
+  cout<<a<<" "<<b<<endl;
+}
